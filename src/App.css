@@ -2,46 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-.App {
-  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f2f2f2;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Navbar */
 .navbar {
   background-color: rgb(103, 57, 255);
   color: white;
@@ -81,6 +50,7 @@
   border-radius: 50%;
 }
 
+/* Sign-in Form */
 .SignIn {
   text-align: center;
   background-color: #f2f2f2;
@@ -95,7 +65,7 @@
 }
 
 .SignIn button {
-  background-color: #4285f4; 
+  background-color: #4285f4;
   color: white;
   border: none;
   border-radius: 4px;
@@ -106,7 +76,7 @@
 }
 
 .SignIn button:hover {
-  background-color: #357ae8; 
+  background-color: #357ae8;
 }
 
 .logout {
@@ -120,24 +90,23 @@
   transition: background-color 0.3s;
 }
 
+/* Post Form */
 .post-form {
-  width: 600px; 
+  width: 600px;
   background-color: rgb(103, 57, 255);
-  border-radius: 20px; 
+  border-radius: 20px;
   padding: 40px;
-  margin: 100px auto; 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  margin: 100px auto;
   color: #fff;
 }
 
 .form-input {
-  width: 100%; 
-  padding: 20px; 
-  margin: 20px 0; 
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #d1d1d1;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
   color: #000;
 }
 
@@ -146,23 +115,22 @@
 }
 
 .warning {
-  color: red; 
-  font-size: 20px; 
-  margin-top: 5px; 
+  color: red;
+  font-size: 20px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
 input[type="submit"] {
-  width: 30%; 
-  padding: 20px; 
+  width: 30%;
+  padding: 20px;
   background-color: #d1d1d1;
   color: rgb(156, 41, 244);
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
-  font-family: Arial, sans-serif;
   transition: background-color 0.3s ease-in-out;
   margin-top: 5px;
 }
@@ -171,36 +139,33 @@ input[type="submit"]:hover {
   background-color: white;
 }
 
-/* Container for the whole post */
+/* Post Styling */
 .post {
+  max-width: 40rem;
   background-color: rgb(103, 57, 255);
   border-radius: 10px;
-  padding: 40px; 
-  margin: 20px auto; 
-  width: 600px; 
+  padding: 40px;
+  margin: 20px auto;
+  width: 100%;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: space-between; /* Push content to the top and bottom */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Title styling */
 .title h1 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Body styling with a custom background color */
-.upperPost {
+.upperPost, .body {
   font-size: 1.2rem;
-  color: #000;
   background-color: #d1d1d1;
   padding: 20px;
   border-radius: 5px;
 }
 
-/* Footer styling */
 .footer {
   display: flex;
   flex-direction: column;
@@ -212,11 +177,10 @@ input[type="submit"]:hover {
   color: white;
 }
 
-/* Like button styling */
 .likeBtn {
   background-color: rgb(103, 57, 255);
   border: none;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.5rem;
@@ -228,9 +192,19 @@ input[type="submit"]:hover {
   color: rgb(103, 57, 255);
 }
 
-/* Styling for the username paragraph */
 .username {
   font-size: 1rem;
   color: #fff;
   margin: 5px 0;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .post-form {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 50%;
+  }
 }
